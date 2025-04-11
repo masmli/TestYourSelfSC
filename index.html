@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>اختبار الأمن السيبراني</title>
+  <style>
+    body { font-family: Arial; direction: rtl; margin: 20px; background: #f9f9f9; }
+    h1 { text-align: center; color: #333; }
+    form { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .question { margin-bottom: 20px; }
+    .result { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h1>اختبار الأمن السيبراني</h1>
+<form id="quizForm">
+  <div class="question">
+    <p>4. أي من التالي يُعد من المبادئ الأساسية الثلاثة للأمن السيبراني؟</p>
+    <label><input type="radio" name="q4" value="1"> أ) السرية</label><br>
+    <label><input type="radio" name="q4" value="0"> ب) المرونة</label><br>
+    <label><input type="radio" name="q4" value="0"> ج) الكفاءة</label><br>
+    <label><input type="radio" name="q4" value="0"> د) السرعة</label>
+  </div>
+
+  <div class="question">
+    <p>5. ما هو عدد الأدوار الوظيفية في الإطار السعودي لكوادر الأمن السيبراني؟</p>
+    <label><input type="radio" name="q5" value="0"> أ) 30 دوراً</label><br>
+    <label><input type="radio" name="q5" value="0"> ب) 35 دوراً</label><br>
+    <label><input type="radio" name="q5" value="1"> ج) 40 دوراً</label><br>
+    <label><input type="radio" name="q5" value="0"> د) 45 دوراً</label>
+  </div>
+
+  <div class="question">
+    <p>6. متى بدأت ظهور التهديدات المنظمة والأكثر تعقيداً في مجال الأمن السيبراني؟</p>
+    <label><input type="radio" name="q6" value="0"> أ) الستينيات</label><br>
+    <label><input type="radio" name="q6" value="0"> ب) الثمانينيات</label><br>
+    <label><input type="radio" name="q6" value="1"> ج) التسعينيات</label><br>
+    <label><input type="radio" name="q6" value="0"> د) بداية القرن الحادي والعشرين</label>
+  </div>
+
+  <div class="question">
+    <p>7. ما هي الفئة التي يندرج تحتها أخصائي التحليل الجنائي الرقمي؟</p>
+    <label><input type="radio" name="q7" value="0"> أ) القيادة وتطوير الكوادر</label><br>
+    <label><input type="radio" name="q7" value="1"> ب) الحماية والدفاع</label><br>
+    <label><input type="radio" name="q7" value="0"> ج) الحوكمة والمخاطر</label><br>
+    <label><input type="radio" name="q7" value="0"> د) معمارية الأمن السيبراني</label>
+  </div>
+
+  <div class="question">
+    <p>8. ما هو عدد المجالات التخصصية في الإطار السعودي لكوادر الأمن السيبراني؟</p>
+    <label><input type="radio" name="q8" value="0"> أ) 10 مجالات</label><br>
+    <label><input type="radio" name="q8" value="0"> ب) 12 مجالاً</label><br>
+    <label><input type="radio" name="q8" value="1"> ج) 15 مجالاً</label><br>
+    <label><input type="radio" name="q8" value="0"> د) 20 مجالاً</label>
+  </div>
+
+  <div class="question">
+    <p>9. أي من التالي يُعد من أهداف مبدأ السلامة في الأمن السيبراني؟</p>
+    <label><input type="radio" name="q9" value="0"> أ) منع الوصول غير المصرح به</label><br>
+    <label><input type="radio" name="q9" value="0"> ب) ضمان استمرارية الخدمة</label><br>
+    <label><input type="radio" name="q9" value="1"> ج) ضمان عدم التلاعب بالبيانات</label><br>
+    <label><input type="radio" name="q9" value="0"> د) تشفير البيانات</label>
+  </div>
+
+  <!-- ... تابع بنفس النمط حتى السؤال 20 ... -->
+
+  <button type="button" onclick="calculateScore()">عرض النتيجة</button>
+  <div class="result" id="result"></div>
+</form>
+
+<script>
+function calculateScore() {
+  const form = document.getElementById('quizForm');
+  const formData = new FormData(form);
+  let score = 0;
+  for (let value of formData.values()) {
+    score += parseInt(value);
+  }
+  document.getElementById('result').innerText = `لقد حصلت على ${score} من 17.`;
+  sendEmail(score);
+}
+
+function sendEmail(score) {
+  const mailto = `mailto:amanet22@gmail.com?subject=نتيجة اختبار الأمن السيبراني&body=النتيجة: ${score} من 17.`;
+  window.location.href = mailto;
+}
+</script>
+
+</body>
+</html>
