@@ -1,0 +1,103 @@
+/* تنسيق عام */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    padding: 0;
+
+    text-align: center;
+
+    background-color: #f4f4f4;
+
+    color: #333;
+
+}
+
+
+
+/* شريط التنقل */
+
+header {
+
+    background-color: #004c97;
+
+    padding: 10px 0;
+
+}
+
+
+
+nav ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+
+
+nav ul li {
+
+    display: inline;
+
+    margin-right: 20px;
+
+}
+
+
+
+nav ul li a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+}
+
+
+
+nav ul li a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* أزرار */
+
+.btn {
+
+    display: inline-block;
+
+    background-color: #004c97;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    margin-top: 10px;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+}
+
+
+
+.btn:hover {
+
+    background-color: #003f7b;
+
+}
+
+
+
+/* الفيديو */
